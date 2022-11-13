@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/popup_cashier_custom_item_group"
+    android:background="@color/colorWhite"
+    android:padding="20dp">
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/popup_button_custom_item_minus_one"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:onClick="popupCashierCustomItemMinusOneInteger"
+        android:layout_below="@+id/popup_custom_item_price_per_unit"
+        android:layout_toLeftOf="@+id/popup_custom_item_quantity"
+        android:layout_toStartOf="@+id/popup_custom_item_quantity" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="16"
+        android:id="@+id/popup_custom_item_quantity"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:maxWidth="50dp"
+        android:maxLength="8"
+        android:text="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignTop="@+id/popup_button_custom_item_minus_one"
+        android:layout_toLeftOf="@+id/popup_button_custom_item_add_one"
+        android:layout_toStartOf="@+id/popup_button_custom_item_add_one" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/popup_button_custom_item_add_one"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:onClick="popupCashierCustomItemAddOneInteger"
+        android:layout_above="@+id/popup_custom_item_close_window"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+ <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/popup_custom_item_close_window"
+        android:onClick="closePopupCashierCustomItemWindow"
+        android:layout_marginTop="117dp"
+        android:layout_below="@+id/popup_button_custom_item_minus_one"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir a Lista"
+        android:id="@+id/popup_custom_item_update_list"
+        android:onClick="finishPopupCashierCustomItemWindow"
+        android:layout_alignTop="@+id/popup_custom_item_close_window"
+        android:layout_alignRight="@+id/popup_button_custom_item_add_one"
+        android:layout_alignEnd="@+id/popup_button_custom_item_add_one"
+        android:layout_toRightOf="@+id/popup_custom_item_textview3"
+        android:layout_toEndOf="@+id/popup_custom_item_textview3" />
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_custom_item_product_name"
+        android:layout_above="@+id/popup_custom_item_textview2"
+        android:layout_alignRight="@+id/popup_custom_item_update_list"
+        android:layout_alignEnd="@+id/popup_custom_item_update_list"
+        android:text="SIN NOMBRE"
+        android:textSize="16dp"
+        android:paddingLeft="20dp"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/popup_custom_item_textview1"
+        android:layout_toEndOf="@+id/popup_custom_item_textview1"
+        android:textIsSelectable="false"
+        android:editable="false"
+        android:contextClickable="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:autoText="false"
+        android:layout_below="@+id/popup_custom_item_barcode" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_custom_item_price_per_unit"
+        android:layout_below="@+id/popup_custom_item_textview1"
+        android:layout_toRightOf="@+id/popup_custom_item_textview2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="0"
+        android:gravity="right"
+        android:textSize="24dp"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_custom_item_price_total"
+        android:text="0"
+        android:gravity="right"
+        android:textSize="24dp"
+        android:layout_alignTop="@+id/popup_custom_item_textview3"
+        android:layout_alignRight="@+id/popup_custom_item_update_list"
+        android:layout_alignEnd="@+id/popup_custom_item_update_list"
+        android:layout_toRightOf="@+id/popup_custom_item_textview3"
+        android:layout_toEndOf="@+id/popup_custom_item_textview3"
+        android:inputType="number"
+        android:editable="false"
+        android:contextClickable="false"
+        android:clickable="false"
+        android:focusable="false" />
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Producto:"
+        android:id="@+id/popup_custom_item_textview1"
+        android:layout_marginTop="47dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Precio : ($ por Unidad)"
+        android:id="@+id/popup_custom_item_textview2"
+        android:layout_below="@+id/popup_custom_item_textview1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/popup_custom_item_price_per_unit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Precio TOTAL:  $"
+        android:id="@+id/popup_custom_item_textview3"
+        android:layout_below="@+id/popup_button_custom_item_minus_one"
+        android:layout_toLeftOf="@+id/popup_custom_item_price_per_unit"
+        android:layout_toStartOf="@+id/popup_custom_item_price_per_unit"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/popup_custom_item_barcode"
+        android:layout_toRightOf="@+id/popup_custom_item_textview1"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/popup_custom_item_update_list"
+        android:layout_alignEnd="@+id/popup_custom_item_update_list"
+        android:text="A001"
+        android:gravity="top|center_horizontal"
+        android:textSize="12dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Codigo"
+        android:id="@+id/popup_custom_item_textview4"
+        android:layout_toLeftOf="@+id/popup_custom_item_barcode"
+        android:layout_toStartOf="@+id/popup_custom_item_barcode" />
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+</RelativeLayout>

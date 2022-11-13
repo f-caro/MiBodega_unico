@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ostachio.mibodega_unico.MainActivity">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:text="@string/text_button_storage"
+        android:id="@+id/button_storage"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickStorage"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:background="#5c8339"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="78dp"
+        android:text="@string/text_button_shelves"
+        android:id="@+id/button_shelves"
+        android:onClick="onClickShelves"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#379c8d"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/button_storage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:text="@string/text_button_cashier"
+        android:id="@+id/button_cashier"
+        android:layout_below="@+id/button_shelves"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickCashier"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:background="#1216d4"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_products"
+        android:id="@+id/button_products"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button_cashier"
+        android:layout_alignEnd="@+id/button_cashier"
+        android:onClick="onClickProducts"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        android:textColor="#ffffff"
+        android:background="#6c0000" />
+</RelativeLayout>

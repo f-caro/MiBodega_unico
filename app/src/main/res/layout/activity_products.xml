@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ostachio.mibodega_unico.products">
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchview_product_search_list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:queryHint="Busca Nombre de Producto"
+        />
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_product_new"
+        android:onClick="startScan"
+        android:textColor="#ffffff"
+        android:background="#09d436"
+        android:paddingLeft="0dp"
+        android:paddingRight="12dp"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:gravity="center_horizontal"
+        android:paddingTop="0dp"
+        android:layout_marginBottom="80dp"
+        android:layout_above="@+id/button_product_scan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+        -->
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_listview"
+        android:layout_below="@+id/searchview_product_search_list"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_product_sendto_whatsapp" />
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wtAPP"
+        android:id="@+id/button_product_sendto"
+        android:typeface="serif"
+        android:textColor="#ffffff"
+        android:background="#ffbe0a"
+        android:elegantTextHeight="false"
+        android:onClick="sendToWhatsAPP"
+        android:layout_alignBottom="@+id/button_product_new"
+        android:layout_alignRight="@+id/product_listview"
+        android:layout_alignEnd="@+id/product_listview" />
+-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\@"
+        android:id="@+id/button_product_new_custom"
+        android:background="#e54343"
+        android:textColor="#ffffff"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:onClick="initiatePopupProductCustomInput"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_storage_scan"
+        android:src="@drawable/barcodescannericon_rectangle"
+        android:onClick="startScan"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_product_sendto_whatsapp"
+        android:onClick="sendToWhatsAPP"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/whatsapp_60dp"
+        android:background="#ffffff" />
+
+</RelativeLayout>

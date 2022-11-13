@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MiBodega_Basico</string>
+    <string name="text_scan_type">Scan Type: </string>
+    <string name="text_scan_barcode">Barcode # </string>
+    <string name="text_button_scan">Start Scan</string>
+
+    <string name="text_button_storage">En Bodega</string>
+    <string name="text_button_shelves">En Vetrina</string>
+    <string name="text_button_cashier">En la Caja</string>
+    <string name="text_button_products">Lista de Productos</string>
+
+    <string name="text_shelves_type">Scan Type</string>
+    <string name="text_shelves_barcode">Barcode Number</string>
+    <string name="text_button_shelves_scan">Scan</string>
+
+    <string name="text_cashier_type">Scan Type</string>
+    <string name="text_cashier_barcode">Barcode Number</string>
+    <string name="text_button_cashier_scan">Scan next</string>
+</resources>

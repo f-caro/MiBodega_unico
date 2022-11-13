@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/popup_cashier_one"
+    android:background="#ffffff"
+    android:padding="20dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar Record"
+        android:id="@+id/popup_cashier_erase"
+        android:onClick="initiatePopupCashierWindowTwo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned"
+        android:ems="16"
+        android:id="@+id/popup_cashier_number"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:maxWidth="50dp"
+        android:maxLength="8"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/popup_cashier_erase"
+        android:text="0"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentLeft="false"
+        android:layout_toLeftOf="@+id/popup_cashier_addone" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/popup_cashier_minusone"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:onClick="popupCashierMinusOneInteger"
+        android:layout_alignTop="@+id/popup_cashier_number"
+        android:layout_toLeftOf="@+id/popup_cashier_number"
+        android:layout_toStartOf="@+id/popup_cashier_number"
+        android:layout_below="@+id/popup_cashier_erase" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/popup_cashier_addone"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:onClick="popupCashierAddOneInteger"
+        android:layout_alignBottom="@+id/popup_cashier_minusone"
+        android:layout_alignLeft="@+id/popup_cashier_erase"
+        android:layout_alignStart="@+id/popup_cashier_erase" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/popup_cashier_cancel"
+        android:onClick="closePopupCashierWindowOne"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/popup_cashier_minusone"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/popup_cashier_minusone"
+        android:layout_marginTop="50dp"
+        android:layout_alignRight="@+id/popup_cashier_minusone"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Cantidad"
+        android:id="@+id/popup_cashier_update"
+        android:onClick="finishPopupCashierWindowOne"
+        android:layout_alignBottom="@+id/popup_cashier_cancel"
+        android:layout_alignRight="@+id/popup_cashier_erase"
+        android:layout_alignEnd="@+id/popup_cashier_erase" />
+</RelativeLayout>

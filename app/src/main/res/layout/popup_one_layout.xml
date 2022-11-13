@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:id="@+id/popup_window_one"
+    android:background="@color/colorWhite"
+    android:padding="20dp">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar Record"
+        android:id="@+id/popup_button_erase"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="initiatePopupWindowTwo"/>
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned"
+        android:ems="16"
+        android:id="@+id/popup_number"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:maxWidth="50dp"
+        android:maxLength="8"
+        android:layout_below="@+id/popup_button_erase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/popup_button_cancel"
+        android:onClick="cancelPopupWindowOne"
+        android:layout_alignTop="@+id/popup_button_update"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Cantidad"
+        android:id="@+id/popup_button_update"
+        android:onClick="closePopupWindowOne"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/popup_button_erase"
+        android:layout_alignEnd="@+id/popup_button_erase" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/popup_plus"
+        android:layout_alignBottom="@+id/popup_number"
+        android:layout_toRightOf="@+id/popup_number"
+        android:layout_toEndOf="@+id/popup_number"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:onClick="popupAddOneInteger"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/popup_minus"
+        android:layout_alignTop="@+id/popup_plus"
+        android:layout_toLeftOf="@+id/popup_number"
+        android:layout_toStartOf="@+id/popup_number"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:onClick="popupMinusOneInteger"/>
+
+</RelativeLayout>

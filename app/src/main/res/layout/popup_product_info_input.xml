@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="20dp">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="0dp"
+        android:fillViewport="false">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/popup_product_info_input_group"
+    android:background="#ffffff"
+    android:padding="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Codigo"
+        android:id="@+id/popup_product_info_textview1"
+        android:layout_marginTop="102dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/popup_product_info_barcode"
+        android:layout_toStartOf="@+id/popup_product_info_barcode" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/popup_product_info_barcode"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:text="0000000000000"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="24dp"
+        android:autoText="false"
+        android:layout_alignTop="@+id/popup_product_info_textview1"
+        android:layout_toRightOf="@+id/popup_product_info_textview2"
+        android:editable="false"
+        android:layout_alignRight="@+id/popup_product_info_promotion_checkbox"
+        android:layout_alignEnd="@+id/popup_product_info_promotion_checkbox"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_product_info_description"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:textSize="24dp"
+        android:autoText="false"
+        android:inputType="textNoSuggestions|text"
+        android:layout_below="@+id/popup_product_info_barcode"
+        android:layout_toRightOf="@+id/popup_product_info_textview2"
+        android:layout_alignRight="@+id/popup_product_info_barcode"
+        android:layout_alignEnd="@+id/popup_product_info_barcode"
+        android:paddingTop="0dp"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oferta"
+        android:id="@+id/popup_product_info_promotion_checkbox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:layout_alignBottom="@+id/popup_product_info_price"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Precio"
+        android:id="@+id/popup_product_info_textview3"
+        android:layout_below="@+id/popup_product_info_description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/popup_product_info_price"
+        android:layout_alignTop="@+id/popup_product_info_textview3"
+        android:layout_toLeftOf="@+id/popup_product_info_promotion_checkbox"
+        android:layout_alignLeft="@+id/popup_product_info_description"
+        android:layout_alignStart="@+id/popup_product_info_description"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        android:textSize="36dp"
+        android:gravity="center_vertical|center"
+        android:text="1000"
+        android:textColor="#052782"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Descripcion"
+        android:id="@+id/popup_product_info_textview2"
+        android:layout_alignTop="@+id/popup_product_info_description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:id="@+id/popup_product_info_button_update"
+        android:textSize="24dp"
+        android:onClick="finishPopupProductsWindow"
+        android:focusable="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/popup_product_info_price"
+        android:textColor="#ffffff"
+        android:background="#0de311"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/popup_product_info_button_cancel"
+        android:onClick="cancelPopupProductsWindow"
+        android:focusable="false"
+        android:layout_below="@+id/popup_product_info_price"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:textStyle="italic" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar Record?"
+        android:id="@+id/popup_product_info_delete_record"
+        android:onClick="initiatePopupProductDeleteRecordWindow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/popup_product_info_imageview"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/popup_product_info_button_update"
+            android:background="#f0e9e9"
+            android:focusable="false"
+            android:enabled="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:adjustViewBounds="true" />
+
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_product_info_photo_address"
+            android:layout_toStartOf="@+id/popup_product_info_button_photo"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:text="address to file"
+            android:enabled="false"
+            android:layout_toLeftOf="@+id/popup_product_info_button_photo"
+            android:focusable="false"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/popup_product_info_imageview" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomar/Reemplazar Foto?"
+            android:id="@+id/popup_product_info_button_photo"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:enabled="false"
+            android:layout_below="@+id/popup_product_info_imageview"
+            android:layout_marginTop="20dp"
+            android:focusable="false"
+            android:onClick="snapPicture"
+            android:background="#f59342" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Mandar Foto por WhatsAPP"
+            android:id="@+id/popup_product_info_button_whatsapp"
+            android:layout_below="@+id/popup_product_info_photo_address"
+            android:layout_alignParentLeft="@+id/popup_product_info_textview1"
+            android:layout_centerHorizontal="true"
+            android:textSize="26dp"
+            android:textColor="#ffffff"
+            android:background="#63e73f"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_marginTop="100dp"
+            android:onClick="checkPictureAddressBeforeWhatsApp"
+            android:layout_marginBottom="50dp"
+            android:drawableRight="@drawable/whatsapp_60dp"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

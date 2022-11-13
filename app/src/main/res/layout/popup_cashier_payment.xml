@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/popup_cashier_payment_group"
+    android:padding="20dp">
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/popup_cashier_payment_closepopupwindow"
+        android:onClick="closePopupCashierPaymentWindow"
+        android:layout_below="@+id/popup_cashier_payment_customer_receives"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmo Pago"
+        android:id="@+id/popup_cashier_payment_finishpopupwindow"
+        android:onClick="finishPopupCashierPaymentWindow"
+        android:layout_alignTop="@+id/popup_cashier_payment_closepopupwindow"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/popup_cashier_payment_total"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/popup_cashier_payment_textview1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|right"
+        android:textStyle="bold"
+        android:background="#e4e4e4"
+        android:textColor="#001e8c"
+        android:contextClickable="false"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/popup_cashier_payment_customer_pays"
+        android:layout_alignTop="@+id/popup_cashier_payment_textview2"
+        android:layout_toRightOf="@+id/popup_cashier_payment_textview2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="46dp"
+        android:text="0"
+        android:textStyle="bold|italic"
+        android:gravity="center_vertical|center_horizontal"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/popup_cashier_payment_customer_receives"
+        android:gravity="left"
+        android:textSize="36dp"
+        android:textColor="#dd1200"
+        android:textStyle="bold"
+        android:contextClickable="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_alignTop="@+id/popup_cashier_payment_textview3"
+        android:layout_alignRight="@+id/popup_cashier_payment_customer_pays"
+        android:layout_alignEnd="@+id/popup_cashier_payment_customer_pays"
+        android:layout_toEndOf="@+id/popup_cashier_payment_textview2"
+        android:inputType="number|numberSigned"
+        android:layout_toRightOf="@+id/popup_cashier_payment_textview2" />
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total: $"
+        android:id="@+id/popup_cashier_payment_textview1"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/popup_cashier_payment_total"
+        android:layout_toStartOf="@+id/popup_cashier_payment_total" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cliente Paga:"
+        android:id="@+id/popup_cashier_payment_textview2"
+        android:layout_below="@+id/popup_cashier_payment_total"
+        android:layout_toLeftOf="@+id/popup_cashier_payment_total"
+        android:layout_toStartOf="@+id/popup_cashier_payment_total"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vuelto:  ($)"
+        android:id="@+id/popup_cashier_payment_textview3"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/popup_cashier_payment_customer_pays"
+        android:layout_alignLeft="@+id/popup_cashier_payment_textview2"
+        android:layout_alignStart="@+id/popup_cashier_payment_textview2" />
+
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+
+</RelativeLayout>
